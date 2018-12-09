@@ -32,10 +32,10 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            ls -ltr /etc/*release*
             yum install -y rpm-build
             yum install -y make
             python --version
+            pip install virtualenv
             make rpm
 
       - save_cache:
