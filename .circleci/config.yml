@@ -35,6 +35,8 @@ jobs:
             ls -ltr /etc/*release*
             yum install -y rpm-build
             yum install -y make
+            which python
+            python --version
             make rpm
 
       - save_cache:
