@@ -33,7 +33,8 @@ flake8:
 
 rpm: bin/$(BIN_NAME)
 	mkdir -p $(MAKE_DIR)/build/rpm/SOURCES
-	cp -f $(MAKE_DIR)/{LICENSE,README.rst} build/rpm/SOURCES
+	cp -f $(MAKE_DIR)/LICENSE build/rpm/SOURCES
+	cp -f $(MAKE_DIR)/README.rst build/rpm/SOURCES
 	cp -f $(MAKE_DIR)/bin/$(BIN_NAME) build/rpm/SOURCES/mongodb-consistent-backup
 	cp -f $(MAKE_DIR)/conf/mongodb-consistent-backup.example.conf build/rpm/SOURCES/mongodb-consistent-backup.conf
 	rpmbuild -D "_topdir $(MAKE_DIR)/build/rpm" -D "version $(VERSION)" -D "release $(RELEASE)" -bb $(MAKE_DIR)/scripts/$(NAME).spec
