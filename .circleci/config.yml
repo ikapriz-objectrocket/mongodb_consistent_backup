@@ -15,6 +15,8 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
+        environment: 
+          PYTHON_BIN: abcd
     working_directory: ~/repo
 
     steps:
@@ -30,7 +32,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pip install virtualenv  
+            which python2
             make rpm
 
       - save_cache:
