@@ -32,7 +32,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            which python2
+            bash --version
             make rpm
 
       - save_cache:
