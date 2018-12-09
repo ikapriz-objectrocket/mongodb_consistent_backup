@@ -30,7 +30,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-              make rpm
+            pip install virtualenv  
+            make rpm
 
       - save_cache:
           paths:
