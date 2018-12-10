@@ -41,5 +41,5 @@ jobs:
         
       - store_artifacts:
           path: /root/repo/build/rpm/RPMS/x86_64/mongodb_consistent_backup-1.4.1-1.el7.x86_64.rpm
-          destination: mongodb_consistent_backup/
+          destination: mongodb_consistent_backup/mongodb_consistent_backup-1.4.1-1.el7.x86_64.rpm
        
