@@ -30,8 +30,9 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: install dependencies
+          name: build the rpm
           command: |
+            ls -ltr /usr/bin/python2.7
             make rpm
 
       - save_cache:
